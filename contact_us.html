@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Student Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ducati-red': '#d9000d',
+            'dark-bg': '#000000',
+            'gray-text': '#a0a0a0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-bg text-white font-sans min-h-screen flex flex-col">
+  
+  <!-- Top Bar -->
+  <div class="bg-[#1a1a1a] h-[30px] flex items-center justify-between px-5 text-xs">
+    <div class="flex items-center">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">SCRAMBLER DUCATI</a>
+      <span class="ml-3 text-gray-text">THE LAND OF JOY</span>
+    </div>
+    <div class="flex items-center gap-5">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">INTERNATIONAL WEBSITE</a>
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">MYDUCATI</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="bg-dark-bg h-[60px] flex items-center justify-between px-5 border-b border-[#333] relative">
+    <div class="flex items-center">
+      <div class="text-2xl cursor-pointer mr-5">☰</div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">MODELS</a>
+        <a href="biodata.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">BIODATA</a>
+        <a href="contact_us.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONTACT</a>
+        <a href="posts.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">POSTS</a>
+        <a href="freepage.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">GALLERY</a>
+      </nav>
+    </div>
+    
+    <!-- Logo Center -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-ducati-red">
+      DUCATI
+    </div>
+    
+    <nav class="hidden lg:flex items-center gap-6">
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">DEALER LOCATOR</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">TEST RIDE</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONFIGURATOR</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 py-16 px-5 md:px-20">
+    <!-- Page Title -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl font-black mb-4">STUDENT REGISTRATION</h1>
+      <div class="w-24 h-1 bg-ducati-red mx-auto"></div>
+      <p class="mt-4 text-gray-text">Fill out the form below to register</p>
+    </div>
+
+    <!-- Success Message (Hidden by default) -->
+    <div id="successMessage" class="max-w-3xl mx-auto mb-6 bg-green-600 text-white p-4 rounded-lg hidden">
+      <p class="font-bold">✓ Registration Successful!</p>
+      <p>Your information has been submitted successfully.</p>
+    </div>
+
+    <!-- Form -->
+    <form id="registrationForm" class="max-w-3xl mx-auto bg-[#1a1a1a] rounded-lg p-8 shadow-2xl">
+      
+      <!-- Full Name -->
+      <div class="mb-6">
+        <label for="fullName" class="block text-sm font-semibold mb-2">Full Name <span class="text-ducati-red">*</span></label>
+        <input 
+          type="text" 
+          id="fullName" 
+          name="fullName" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+          placeholder="Enter your full name"
+        >
+        <p id="fullNameError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Student ID (NIM) -->
+      <div class="mb-6">
+        <label for="nim" class="block text-sm font-semibold mb-2">Student ID (NIM) <span class="text-ducati-red">*</span></label>
+        <input 
+          type="text" 
+          id="nim" 
+          name="nim" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+          placeholder="Enter your student ID"
+        >
+        <p id="nimError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Email -->
+      <div class="mb-6">
+        <label for="email" class="block text-sm font-semibold mb-2">Email Address <span class="text-ducati-red">*</span></label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+          placeholder="your.email@example.com"
+        >
+        <p id="emailError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Faculty/Major -->
+      <div class="mb-6">
+        <label for="faculty" class="block text-sm font-semibold mb-2">Faculty/Major <span class="text-ducati-red">*</span></label>
+        <select 
+          id="faculty" 
+          name="faculty" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+        >
+          <option value="">-- Select Faculty/Major --</option>
+          <option value="Informatics Engineering">Informatics Engineering</option>
+          <option value="Information Systems">Information Systems</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Software Engineering">Software Engineering</option>
+          <option value="Data Science">Data Science</option>
+        </select>
+        <p id="facultyError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Date of Birth -->
+      <div class="mb-6">
+        <label for="dob" class="block text-sm font-semibold mb-2">Date of Birth <span class="text-ducati-red">*</span></label>
+        <input 
+          type="date" 
+          id="dob" 
+          name="dob" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+        >
+        <p id="dobError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Gender -->
+      <div class="mb-6">
+        <label class="block text-sm font-semibold mb-2">Gender <span class="text-ducati-red">*</span></label>
+        <div class="flex gap-6">
+          <label class="flex items-center cursor-pointer">
+            <input type="radio" name="gender" value="Male" class="mr-2 w-4 h-4 text-ducati-red focus:ring-ducati-red">
+            <span>Male</span>
+          </label>
+          <label class="flex items-center cursor-pointer">
+            <input type="radio" name="gender" value="Female" class="mr-2 w-4 h-4 text-ducati-red focus:ring-ducati-red">
+            <span>Female</span>
+          </label>
+        </div>
+        <p id="genderError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Address -->
+      <div class="mb-6">
+        <label for="address" class="block text-sm font-semibold mb-2">Address <span class="text-ducati-red">*</span></label>
+        <textarea 
+          id="address" 
+          name="address" 
+          rows="4" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+          placeholder="Enter your complete address"
+        ></textarea>
+        <p id="addressError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="mb-6">
+        <label for="phone" class="block text-sm font-semibold mb-2">Phone Number <span class="text-ducati-red">*</span></label>
+        <input 
+          type="tel" 
+          id="phone" 
+          name="phone" 
+          class="w-full px-4 py-3 bg-[#111] border border-gray-700 rounded focus:outline-none focus:border-ducati-red focus:ring-2 focus:ring-ducati-red transition-all"
+          placeholder="08123456789 (min. 10 digits)"
+        >
+        <p id="phoneError" class="text-ducati-red text-sm mt-1 hidden"></p>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button 
+          type="submit" 
+          class="bg-ducati-red text-white px-12 py-4 font-bold uppercase rounded hover:bg-red-700 transition-all transform hover:scale-105"
+        >
+          SUBMIT REGISTRATION
+        </button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto pt-10 bg-[#1a1a1a] text-gray-text">
+    <div class="flex flex-col md:flex-row justify-around px-5 md:px-10 pb-10 border-b border-[#333]">
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">Models</h4>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Panigale</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Streetfighter</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Monster</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Multistrada</a>
+      </div>
+      
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">External Links</h4>
+        <a href="https://fti.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">FTI UNAI</a>
+        <a href="https://www.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">UNAI Website</a>
+      </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row justify-between items-center p-5 text-xs">
+      <p>&copy; 2025 Ducati Motor Holding S.p.A - A Sole Shareholder Company</p>
+      <div class="flex gap-4 mt-3 md:mt-0">
+        <a href="#" class="hover:text-ducati-red transition-colors">[FB]</a>
+        <a href="#" class="hover:text-ducati-red transition-colors">[IG]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="validation.js"></script>
+</body>
+</html>

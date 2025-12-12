@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Ducati Collection</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ducati-red': '#d9000d',
+            'dark-bg': '#000000',
+            'gray-text': '#a0a0a0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-bg text-white font-sans min-h-screen flex flex-col">
+  
+  <!-- Top Bar -->
+  <div class="bg-[#1a1a1a] h-[30px] flex items-center justify-between px-5 text-xs">
+    <div class="flex items-center">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">SCRAMBLER DUCATI</a>
+      <span class="ml-3 text-gray-text">THE LAND OF JOY</span>
+    </div>
+    <div class="flex items-center gap-5">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">INTERNATIONAL WEBSITE</a>
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">MYDUCATI</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="bg-dark-bg h-[60px] flex items-center justify-between px-5 border-b border-[#333] relative">
+    <div class="flex items-center">
+      <div class="text-2xl cursor-pointer mr-5">☰</div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">MODELS</a>
+        <a href="biodata.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">BIODATA</a>
+        <a href="contact_us.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONTACT</a>
+        <a href="posts.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">POSTS</a>
+        <a href="freepage.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">GALLERY</a>
+      </nav>
+    </div>
+    
+    <!-- Logo Center -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-ducati-red">
+      DUCATI
+    </div>
+    
+    <nav class="hidden lg:flex items-center gap-6">
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">DEALER LOCATOR</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">TEST RIDE</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONFIGURATOR</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 py-16 px-5 md:px-20">
+    <!-- Page Title -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl font-black mb-4">DUCATI GALLERY</h1>
+      <div class="w-24 h-1 bg-ducati-red mx-auto"></div>
+      <p class="mt-4 text-gray-text">Explore the passion, power, and precision of Ducati motorcycles</p>
+    </div>
+
+    <!-- Gallery Filter Tabs -->
+    <div class="max-w-6xl mx-auto mb-12">
+      <div class="flex flex-wrap justify-center gap-4">
+        <button onclick="filterGallery('all')" class="filter-btn active bg-ducati-red text-white px-6 py-2 rounded font-semibold hover:bg-red-700 transition-all transform hover:scale-105">
+          ALL
+        </button>
+        <button onclick="filterGallery('sport')" class="filter-btn bg-[#1a1a1a] text-white px-6 py-2 rounded font-semibold hover:bg-ducati-red transition-all transform hover:scale-105">
+          SPORT
+        </button>
+        <button onclick="filterGallery('naked')" class="filter-btn bg-[#1a1a1a] text-white px-6 py-2 rounded font-semibold hover:bg-ducati-red transition-all transform hover:scale-105">
+          NAKED
+        </button>
+        <button onclick="filterGallery('travel')" class="filter-btn bg-[#1a1a1a] text-white px-6 py-2 rounded font-semibold hover:bg-ducati-red transition-all transform hover:scale-105">
+          TRAVEL
+        </button>
+        <button onclick="filterGallery('racing')" class="filter-btn bg-[#1a1a1a] text-white px-6 py-2 rounded font-semibold hover:bg-ducati-red transition-all transform hover:scale-105">
+          RACING
+        </button>
+      </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item sport group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Ducati Pic 1.jpg" alt="Ducati Panigale" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Panigale V4</h3>
+              <p class="text-sm text-gray-300">The pinnacle of sport performance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item naked group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Ducati pic 2.png" alt="Streetfighter" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Streetfighter V4</h3>
+              <p class="text-sm text-gray-300">Raw power, naked aggression</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item travel group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Ducati pic 3.png" alt="Multistrada" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Multistrada V4</h3>
+              <p class="text-sm text-gray-300">Adventure without limits</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item racing group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Moto GP 1.jpg" alt="MotoGP" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">MotoGP Racing</h3>
+              <p class="text-sm text-gray-300">Championship winning technology</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item sport group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Ducati pic 4.webp" alt="Panigale V2" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Panigale V2</h3>
+              <p class="text-sm text-gray-300">Perfect balance of performance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 6 -->
+        <div class="gallery-item naked group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Latenews 1.jpg" alt="Monster" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Monster+</h3>
+              <p class="text-sm text-gray-300">Icon of the naked segment</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 7 -->
+        <div class="gallery-item racing group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Latenews 3.jpg" alt="Racing Team" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Racing Heritage</h3>
+              <p class="text-sm text-gray-300">Decades of championship success</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 8 -->
+        <div class="gallery-item travel group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Latenews 2.jpg" alt="Desert X" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">DesertX</h3>
+              <p class="text-sm text-gray-300">Off-road innovation</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Item 9 -->
+        <div class="gallery-item racing group relative overflow-hidden rounded-lg cursor-pointer transform transition-all duration-300 hover:scale-105">
+          <img src="image/Latenews 4.jpg" alt="Racing Academy" class="w-full h-64 object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-xl font-bold text-white mb-2">Ducati Academy</h3>
+              <p class="text-sm text-gray-300">Future champions in the making</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="max-w-6xl mx-auto mt-20">
+      <h2 class="text-3xl font-bold text-center mb-8">EXPERIENCE DUCATI</h2>
+      <div class="aspect-w-16 aspect-h-9 bg-[#1a1a1a] rounded-lg overflow-hidden">
+        <iframe 
+          class="w-full h-[400px] md:h-[500px]" 
+          src="https://youtu.be/WhHcTgtxufQ?si=To8NLREcznfo4abD" 
+          title="Ducati Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="max-w-6xl mx-auto mt-20">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-[#1a1a1a] p-8 rounded-lg transform transition-all hover:scale-105">
+          <p class="text-4xl font-black text-ducati-red mb-2">97</p>
+          <p class="text-sm text-gray-text uppercase">Years of Heritage</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-lg transform transition-all hover:scale-105">
+          <p class="text-4xl font-black text-ducati-red mb-2">350+</p>
+          <p class="text-sm text-gray-text uppercase">World Championships</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-lg transform transition-all hover:scale-105">
+          <p class="text-4xl font-black text-ducati-red mb-2">50+</p>
+          <p class="text-sm text-gray-text uppercase">Countries</p>
+        </div>
+        <div class="bg-[#1a1a1a] p-8 rounded-lg transform transition-all hover:scale-105">
+          <p class="text-4xl font-black text-ducati-red mb-2">15+</p>
+          <p class="text-sm text-gray-text uppercase">Model Families</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-20 pt-10 bg-[#1a1a1a] text-gray-text">
+    <div class="flex flex-col md:flex-row justify-around px-5 md:px-10 pb-10 border-b border-[#333]">
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">Models</h4>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Panigale</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Streetfighter</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Monster</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Multistrada</a>
+      </div>
+      
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">External Links</h4>
+        <a href="https://fti.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">FTI UNAI</a>
+        <a href="https://www.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">UNAI Website</a>
+      </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row justify-between items-center p-5 text-xs">
+      <p>&copy; 2025 Ducati Motor Holding S.p.A - A Sole Shareholder Company</p>
+      <div class="flex gap-4 mt-3 md:mt-0">
+        <a href="#" class="hover:text-ducati-red transition-colors">[FB]</a>
+        <a href="#" class="hover:text-ducati-red transition-colors">[IG]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Filter gallery function
+    function filterGallery(category) {
+      const items = document.querySelectorAll('.gallery-item');
+      const buttons = document.querySelectorAll('.filter-btn');
+      
+      // Remove active class from all buttons
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-ducati-red');
+        btn.classList.add('bg-[#1a1a1a]');
+      });
+      
+      // Add active class to clicked button
+      event.target.classList.add('active', 'bg-ducati-red');
+      event.target.classList.remove('bg-[#1a1a1a]');
+      
+      // Filter items
+      items.forEach(item => {
+        if (category === 'all') {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 10);
+        } else if (item.classList.contains(category)) {
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 10);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.8)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 300);
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts - Ducati</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ducati-red': '#d9000d',
+            'dark-bg': '#000000',
+            'gray-text': '#a0a0a0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-bg text-white font-sans min-h-screen flex flex-col">
+  
+  <!-- Top Bar -->
+  <div class="bg-[#1a1a1a] h-[30px] flex items-center justify-between px-5 text-xs">
+    <div class="flex items-center">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">SCRAMBLER DUCATI</a>
+      <span class="ml-3 text-gray-text">THE LAND OF JOY</span>
+    </div>
+    <div class="flex items-center gap-5">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">INTERNATIONAL WEBSITE</a>
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">MYDUCATI</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="bg-dark-bg h-[60px] flex items-center justify-between px-5 border-b border-[#333] relative">
+    <div class="flex items-center">
+      <div class="text-2xl cursor-pointer mr-5">☰</div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">MODELS</a>
+        <a href="biodata.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">BIODATA</a>
+        <a href="contact_us.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONTACT</a>
+        <a href="posts.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">POSTS</a>
+        <a href="freepage.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">GALLERY</a>
+      </nav>
+    </div>
+    
+    <!-- Logo Center -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-ducati-red">
+      DUCATI
+    </div>
+    
+    <nav class="hidden lg:flex items-center gap-6">
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">DEALER LOCATOR</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">TEST RIDE</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONFIGURATOR</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 py-16 px-5 md:px-20">
+    <!-- Page Title -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-6xl font-black mb-4">BLOG POST</h1>
+      <div class="w-24 h-1 bg-ducati-red mx-auto"></div>
+      <p class="mt-4 text-gray-text">Fetched from JSONPlaceholder API</p>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading" class="text-center py-12">
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-ducati-red"></div>
+      <p class="mt-4 text-gray-text">Loading post data...</p>
+    </div>
+
+    <!-- Error Message -->
+    <div id="error" class="max-w-4xl mx-auto bg-red-900 text-white p-6 rounded-lg hidden">
+      <p class="font-bold">⚠ Error Loading Data</p>
+      <p id="errorMessage"></p>
+    </div>
+
+    <!-- Post Content (Card Style) -->
+    <div id="postContent" class="max-w-4xl mx-auto hidden">
+      <div class="bg-[#1a1a1a] rounded-lg overflow-hidden shadow-2xl">
+        <!-- Post Header -->
+        <div class="bg-ducati-red p-6">
+          <div class="flex items-center justify-between">
+            <span class="bg-black bg-opacity-30 px-4 py-2 rounded text-sm font-bold">POST ID: <span id="postId"></span></span>
+            <span class="text-sm">📅 API Response</span>
+          </div>
+        </div>
+        
+        <!-- Post Body -->
+        <div class="p-8">
+          <h2 id="postTitle" class="text-3xl font-bold mb-6 text-ducati-red"></h2>
+          <div class="prose prose-invert max-w-none">
+            <p id="postBody" class="text-lg leading-relaxed text-gray-300"></p>
+          </div>
+        </div>
+        
+        <!-- Post Footer -->
+        <div class="bg-[#111] p-6 border-t border-gray-800">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <span class="text-sm text-gray-text">👤 User ID: <span id="userId" class="text-white font-semibold"></span></span>
+            </div>
+            <button onclick="location.reload()" class="bg-ducati-red text-white px-6 py-2 rounded font-semibold hover:bg-red-700 transition-colors">
+              Reload Data
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Info -->
+      <div class="mt-8 bg-[#1a1a1a] rounded-lg p-6">
+        <h3 class="text-xl font-bold mb-4">About This Data</h3>
+        <p class="text-gray-text leading-relaxed">
+          This post data is fetched from <strong class="text-white">JSONPlaceholder API</strong>, a free fake API for testing and prototyping. 
+          The post number is based on the last two digits of my Student ID (NIM).
+        </p>
+        <div class="mt-4 p-4 bg-[#111] rounded">
+          <p class="text-sm text-gray-text">API Endpoint:</p>
+          <code id="apiEndpoint" class="text-ducati-red text-sm"></code>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-auto pt-10 bg-[#1a1a1a] text-gray-text">
+    <div class="flex flex-col md:flex-row justify-around px-5 md:px-10 pb-10 border-b border-[#333]">
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">Models</h4>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Panigale</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Streetfighter</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Monster</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Multistrada</a>
+      </div>
+      
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">External Links</h4>
+        <a href="https://fti.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">FTI UNAI</a>
+        <a href="https://www.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">UNAI Website</a>
+      </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row justify-between items-center p-5 text-xs">
+      <p>&copy; 2025 Ducati Motor Holding S.p.A - A Sole Shareholder Company</p>
+      <div class="flex gap-4 mt-3 md:mt-0">
+        <a href="#" class="hover:text-ducati-red transition-colors">[FB]</a>
+        <a href="#" class="hover:text-ducati-red transition-colors">[IG]</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="posts.js"></script>
+</body>
+</html>

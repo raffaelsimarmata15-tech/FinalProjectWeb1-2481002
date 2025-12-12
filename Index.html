@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ducati Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ducati-red': '#d9000d',
+            'dark-bg': '#000000',
+            'gray-text': '#a0a0a0',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-bg text-white font-sans min-h-screen flex flex-col">
+  
+  <!-- Top Bar -->
+  <div class="bg-[#1a1a1a] h-[30px] flex items-center justify-between px-5 text-xs">
+    <div class="flex items-center">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">SCRAMBLER DUCATI</a>
+      <span class="ml-3 text-gray-text">THE LAND OF JOY</span>
+    </div>
+    <div class="flex items-center gap-5">
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">INTERNATIONAL WEBSITE</a>
+      <a href="#" class="text-gray-text hover:text-ducati-red transition-colors">MYDUCATI</a>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="bg-dark-bg h-[60px] flex items-center justify-between px-5 border-b border-[#333] relative">
+    <div class="flex items-center">
+      <div class="text-2xl cursor-pointer mr-5">☰</div>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">MODELS</a>
+        <a href="biodata.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">BIODATA</a>
+        <a href="contact_us.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONTACT</a>
+        <a href="posts.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">POSTS</a>
+        <a href="freepage.html" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">GALLERY</a>
+      </nav>
+    </div>
+    
+    <!-- Logo Center -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-ducati-red">
+      DUCATI
+    </div>
+    
+    <nav class="hidden lg:flex items-center gap-6">
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">DEALER LOCATOR</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">TEST RIDE</a>
+      <a href="#" class="text-xs font-semibold uppercase hover:text-ducati-red transition-colors">CONFIGURATOR</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-[90vh] bg-cover bg-center bg-[position:center_20%] flex flex-col justify-end relative" style="background-image: url('image/Ducati Pic 1.jpg');">
+    <div class="relative z-10 p-10 md:p-20 flex flex-col">
+      <p class="text-sm uppercase tracking-wider mb-2">DUCATI WORLD PREMIÈRE 2026</p>
+      <h1 class="text-5xl md:text-7xl font-black mb-2 leading-none">Never so Hyper</h1>
+      <p class="mb-5">November 4, 2025 | 7:30 p.m. CET</p>
+      <a href="#" class="bg-ducati-red text-white px-6 py-3 font-bold uppercase self-start hover:bg-red-700 transition-colors">DISCOVER MORE</a>
+    </div>
+  </section>
+
+  <!-- Model Categories -->
+  <section class="py-10 md:py-16 text-center">
+    <div class="flex flex-col md:flex-row justify-around gap-5 px-5 md:px-10 mb-10">
+      <article class="flex-1 flex flex-col items-center p-5 bg-[#111] hover:bg-[#1a1a1a] transition-colors">
+        <img src="image/Ducati pic 2.png" alt="Sport Bikes" class="w-full max-w-[250px] h-auto mb-3">
+        <h2 class="text-xl font-bold mb-3">SPORT</h2>
+        <a href="#" class="border-2 border-ducati-red text-ducati-red px-4 py-2 hover:bg-ducati-red hover:text-white transition-all">Explore</a>
+      </article>
+      
+      <article class="flex-1 flex flex-col items-center p-5 bg-[#111] hover:bg-[#1a1a1a] transition-colors">
+        <img src="image/Ducati pic 2.png" alt="Naked Bikes" class="w-full max-w-[250px] h-auto mb-3">
+        <h2 class="text-xl font-bold mb-3">NAKED</h2>
+        <a href="#" class="border-2 border-ducati-red text-ducati-red px-4 py-2 hover:bg-ducati-red hover:text-white transition-all">Explore</a>
+      </article>
+      
+      <article class="flex-1 flex flex-col items-center p-5 bg-[#111] hover:bg-[#1a1a1a] transition-colors">
+        <img src="image/Ducati pic 3.png" alt="Travel Bikes" class="w-full max-w-[250px] h-auto mb-3">
+        <h2 class="text-xl font-bold mb-3">TRAVEL</h2>
+        <a href="#" class="border-2 border-ducati-red text-ducati-red px-4 py-2 hover:bg-ducati-red hover:text-white transition-all">Explore</a>
+      </article>
+      
+      <article class="flex-1 flex flex-col items-center p-5 bg-[#111] hover:bg-[#1a1a1a] transition-colors">
+        <img src="image/Ducati pic 4.webp" alt="Off Road Bikes" class="w-full max-w-[250px] h-auto mb-3">
+        <h2 class="text-xl font-bold mb-3">OFF-ROAD</h2>
+        <a href="#" class="border-2 border-ducati-red text-ducati-red px-4 py-2 hover:bg-ducati-red hover:text-white transition-all">Explore</a>
+      </article>
+    </div>
+    <a href="#" class="bg-ducati-red text-white px-8 py-4 font-bold uppercase inline-block hover:bg-red-700 transition-colors">DISCOVER ALL MODELS</a>
+  </section>
+
+  <!-- Latest News -->
+  <section class="py-10 md:py-16 px-5 md:px-10 bg-white text-black">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold">Latest news</h2>
+      <a href="#" class="text-sm hover:text-ducati-red transition-colors">DISCOVER ALL THE NEWS ></a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <article class="bg-white overflow-hidden hover:shadow-lg transition-shadow">
+        <img src="image/Latenews 1.jpg" alt="Ducati Apparel" class="w-full h-auto">
+        <div class="p-4">
+          <p class="text-xs text-gray-600 uppercase mb-2">EQUIPMENT, APPAREL</p>
+          <h3 class="text-sm font-bold mb-3">"Born to Perform": Italian design meets sporting performance in the new Macron X Ducati collection.</h3>
+          <p class="text-xs text-gray-500">15 OCT 2025</p>
+        </div>
+      </article>
+      
+      <article class="bg-white overflow-hidden hover:shadow-lg transition-shadow">
+        <img src="image/Latenews 2.jpg" alt="V4 Granturismo" class="w-full h-auto">
+        <div class="p-4">
+          <p class="text-xs text-gray-600 uppercase mb-2">BIKES, MULTISTRADA</p>
+          <h3 class="text-sm font-bold mb-3">V4 Granturismo tested for long distances: discover the details of the test after 100,000 and 200,000 kilometers.</h3>
+          <p class="text-xs text-gray-500">14 OCT 2025</p>
+        </div>
+      </article>
+      
+      <article class="bg-white overflow-hidden hover:shadow-lg transition-shadow">
+        <img src="image/Latenews 3.jpg" alt="Ducati Racing" class="w-full h-auto">
+        <div class="p-4">
+          <p class="text-xs text-gray-600 uppercase mb-2">BIKES, PANIGALE</p>
+          <h3 class="text-sm font-bold mb-3">The Ducati Panigale V4 wins the CIV SBK Production Bike Championship</h3>
+          <p class="text-xs text-gray-500">06 OCT 2025</p>
+        </div>
+      </article>
+      
+      <article class="bg-black text-white overflow-hidden hover:shadow-lg transition-shadow">
+        <img src="image/Latenews 4.jpg" alt="Ducati Academy" class="w-full h-auto">
+        <div class="p-4">
+          <p class="text-xs text-gray-400 uppercase mb-2">RACING, COMPANY, CORPORATE</p>
+          <h3 class="text-sm font-bold mb-3">Ducati and Garage 51 present the "N2 Future Champ Ducati Academy - Become the Next One"</h3>
+          <p class="text-xs text-gray-500">03 OCT 2025</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Services & Tools -->
+  <section class="flex flex-col md:flex-row justify-center gap-10 py-10 md:py-16 px-5 bg-[#0c0c0c]">
+    <div class="flex-1 max-w-md p-8 text-center bg-[#111] flex flex-col items-center justify-between min-h-[250px] hover:bg-[#1a1a1a] transition-colors">
+      <h3 class="text-xl font-bold mb-3">Find Your Dealer</h3>
+      <p class="mb-5 text-gray-text">Find the nearest official Ducati dealership or service point.</p>
+      <a href="#" class="bg-ducati-red text-white px-6 py-3 font-bold uppercase hover:bg-red-700 transition-colors">Dealer Locator</a>
+    </div>
+    
+    <div class="flex-1 max-w-md p-8 text-center bg-[#111] flex flex-col items-center justify-between min-h-[250px] hover:bg-[#1a1a1a] transition-colors">
+      <h3 class="text-xl font-bold mb-3">Build Your Dream Bike</h3>
+      <p class="mb-5 text-gray-text">Use our configurator to customize your next Ducati motorcycle.</p>
+      <a href="#" class="bg-ducati-red text-white px-6 py-3 font-bold uppercase hover:bg-red-700 transition-colors">Configurator</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-auto pt-10 bg-[#1a1a1a] text-gray-text">
+    <div class="flex flex-col md:flex-row justify-around px-5 md:px-10 pb-10 border-b border-[#333]">
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">Models</h4>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Panigale</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Streetfighter</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Monster</a>
+        <a href="#" class="py-1 hover:text-ducati-red transition-colors">Multistrada</a>
+      </div>
+      
+      <div class="flex flex-col mb-5 md:mb-0">
+        <h4 class="text-white font-bold mb-3">External Links</h4>
+        <a href="https://fti.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">FTI UNAI</a>
+        <a href="https://www.unai.edu" target="_blank" class="py-1 hover:text-ducati-red transition-colors">UNAI Website</a>
+      </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row justify-between items-center p-5 text-xs">
+      <p>&copy; 2025 Ducati Motor Holding S.p.A - A Sole Shareholder Company</p>
+      <div class="flex gap-4 mt-3 md:mt-0">
+        <a href="#" class="hover:text-ducati-red transition-colors">[FB]</a>
+        <a href="#" class="hover:text-ducati-red transition-colors">[IG]</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
